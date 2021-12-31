@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,12 +6,21 @@ import { Router } from '@angular/router';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, OnDestroy {
+
+  private timeout;
 
   constructor(private router: Router) { }
 
   ngOnInit(): void {
-    console.log('HomeComponent INIT');
+    this.goHome();
   }
 
+  goHome() {
+    this.timeout = setTimeout(() => this.router.navigate(['/detail']), 7000);
+  };
+
+  ngOnDestroy(): void {
+    clearTimeout(this.timeout);
+  }
 }

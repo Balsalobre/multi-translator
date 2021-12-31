@@ -1,3 +1,36 @@
+@import '../shared/styles/animations';
+
 :host {
-  
+  .container {
+    background: #0f2027;
+    background: linear-gradient(45deg, #0d3b47, #0e3e4b, #07252d, #0a3642);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    animation-direction: alternate;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100vw;
+    min-height: 100vh;
+    animation-duration: 8s;
+    animation-fill-mode: both;
+
+    .title {
+      position: relative;
+      font-size: 5rem;
+      letter-spacing: 15px;
+      color: #0e3742;
+      text-transform: uppercase;
+      width: 100%;
+      text-align: center;
+      -webkit-box-reflect: below 1px linear-gradient(transparent, #0008);
+      line-height: 0.7em;
+      outline: none;
+      animation: animateHomeText 5s linear infinite;
+    }
+  }
+
+  .fadeOut {
+    animation-name: startFadeOut;
+  }
 }
