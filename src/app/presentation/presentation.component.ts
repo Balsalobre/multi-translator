@@ -2,11 +2,11 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  selector: 'app-presentation',
+  templateUrl: './presentation.component.html',
+  styleUrls: ['./presentation.component.scss']
 })
-export class HomeComponent implements OnInit, OnDestroy {
+export class PresentationComponent implements OnInit, OnDestroy {
 
   private timeout;
 
