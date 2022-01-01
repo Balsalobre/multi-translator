@@ -1,0 +1,9 @@
+@import './colours';
+@import './sizes';
+
+$color-black: rgb(15, 15, 15);
+$color-white: rgb(243, 243, 243);
+$color-gray-light: rgba($color-white, .15);
+$color-gray-dark: rgba($color-black, .15);
+$background-dark: $gray-9;
+$background-light: $gray-0

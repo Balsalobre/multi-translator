@@ -1,0 +1,23 @@
+:host {
+  .header {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+
+    background-color: black;
+    color: white;
+    padding: 0.6rem;
+
+    &__text {
+      grid-column: 1 / 4 span;
+      margin: 0;
+      strong {
+        color: red;
+      }
+    }
+
+    &__theme {
+      grid-column-start: 5;
+    }
+  }
+}

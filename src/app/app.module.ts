@@ -12,12 +12,13 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { PresentationModule } from './presentation/presentation.module';
-import { DetailModule } from './detail/detail.module';
+import { HomeModule } from './home/home.module';
 
 import { AppComponent } from './app.component';
 
 // AoT requires an exported function for factories
-const httpLoaderFactory = (http: HttpClient): TranslateHttpLoader =>  new TranslateHttpLoader(http, './assets/i18n/', '.json');
+const httpLoaderFactory = (http: HttpClient): TranslateHttpLoader =>
+  new TranslateHttpLoader(http, './assets/i18n/', '.json');
 
 @NgModule({
   declarations: [AppComponent],
@@ -28,7 +29,7 @@ const httpLoaderFactory = (http: HttpClient): TranslateHttpLoader =>  new Transl
     CoreModule,
     SharedModule,
     PresentationModule,
-    DetailModule,
+    HomeModule,
     AppRoutingModule,
     TranslateModule.forRoot({
       loader: {

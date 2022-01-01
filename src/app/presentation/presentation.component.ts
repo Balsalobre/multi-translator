@@ -17,7 +17,7 @@ export class PresentationComponent implements OnInit, OnDestroy {
   }
 
   goHome() {
-    this.timeout = setTimeout(() => this.router.navigate(['/detail']), 7000);
+    this.timeout = setTimeout(() => this.router.navigate(['/home']), 7000);
   };
 
   ngOnDestroy(): void {
