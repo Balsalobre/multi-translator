@@ -1,9 +1,12 @@
 <header class="header">
   <div class="header__text">
-    Estás ahorrando <strong>15:04</strong> de tu vida usando <span>multi translator</span>
+    Estás ahorrando<strong>{{ timeSpentFormatted }}</strong>de tu vida usando esta aplicación.
   </div>
   <div class="header__theme">
-    <button class="header__theme__switch">
+    <button
+      class="switch"
+      [ngClass]="{'active': toggleTheme}"
+      (click)="changeTheme()">
         <span><i class="ri-sun-line"></i></span>
         <span><i class="ri-moon-line"></i></span>
     </button>

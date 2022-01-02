@@ -1,23 +1,73 @@
+@import '../../styles/colours';
+
 :host {
   .header {
-    display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-    grid-template-rows: 20% 20% 20% 20% 20%;
-
-    background-color: black;
-    color: white;
-    padding: 0.6rem;
-
+    padding-top: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
     &__text {
-      grid-column: 1 / 4 span;
-      margin: 0;
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      color: var(--text-1);
       strong {
-        color: red;
+        padding: 0 0.2rem 0 0.2rem;
+        color: var(--highlighted-text);
+        text-shadow: var(--highlighted-text-shadow);
       }
     }
 
     &__theme {
-      grid-column-start: 5;
+      padding-right: 1rem;
+      .switch {
+        background-color: $gray-9;
+        border-radius: 1rem;
+        border: none;
+        position: relative;
+        cursor: pointer;
+        display: flex;
+        outline: none;
+        
+        &::after {
+          content: '';
+          display: block;
+          width: 1.5rem;
+          height: 1.5rem;
+          position: absolute;
+          background-color: $gray-3;
+          top: 2.6px;
+          left: 2px;
+          right: unset;
+          border-radius: 1rem;
+          transition: all 0.3s ease;
+          -webkit-transition: all 0.3s ease;
+          box-shadow: 0 0 2px 2px rgb(0, 0, 0, 0.2);
+        }
+
+        &.active {
+          background-color: $orange-3;
+          &::after {
+            background-color: $gray-2;
+            right: 3px;
+            left: unset;
+          }
+          span {
+            color: $gray-9;
+          }
+        }
+
+        span {
+          width: 1.9rem;
+          height: 1.9rem;
+          line-height: 1.9rem;
+          display: block;
+          background: none;
+          color: $gray-1;
+          font-size: 1.2rem;
+        }
+      }
     }
   }
 }

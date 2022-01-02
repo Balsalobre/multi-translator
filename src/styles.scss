@@ -1,11 +1,10 @@
 @import 'remixicon/fonts/remixicon.css';
 @import './app/shared/styles/variables';
 
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  font-family: Arial, Helvetica, sans-serif;
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
 
 :root {
@@ -15,6 +14,10 @@ html, body {
   --color-article-background: #{$color-white};
   --color-article-shadow: #{$color-gray-dark};
   --background: #{$background-light};
+  --text-1: #{$text-1-light};
+  --text-2: #{$text-2-light};
+  --highlighted-text: #{$highlighted-text-light};
+  --highlighted-text-shadow: #{$highlighted-text-light-shadow};
 }
 
 .dark {
@@ -24,6 +27,10 @@ html, body {
   --color-article-background: #{$color-gray-light};
   --color-article-shadow: #{$color-gray-dark};
   --background: #{$background-dark};
+  --text-1: #{$text-1-dark};
+  --text-2: #{$text-2-dark};
+  --highlighted-text: #{$highlighted-text-dark};
+  --highlighted-text-shadow: #{$highlighted-text-light-shadow};
 }
 
 
