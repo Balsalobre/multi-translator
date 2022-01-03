@@ -30,6 +30,7 @@
         cursor: pointer;
         display: flex;
         outline: none;
+        transition: all 0.5s ease;
         
         &::after {
           content: '';
@@ -42,8 +43,6 @@
           left: 2px;
           right: unset;
           border-radius: 1rem;
-          transition: all 0.3s ease;
-          -webkit-transition: all 0.3s ease;
           box-shadow: 0 0 2px 2px rgb(0, 0, 0, 0.2);
         }
 
