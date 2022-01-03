@@ -1,4 +1,4 @@
-import { Component, OnInit, Renderer2 } from '@angular/core';
+import { Component, OnDestroy, OnInit, Renderer2 } from '@angular/core';
 import { differenceInSeconds, format } from 'date-fns';
 
 
@@ -7,19 +7,19 @@ import { differenceInSeconds, format } from 'date-fns';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, OnDestroy {
 
   toggleTheme = false;
-  timeSpent: number;
   timeSpentFormatted = '00:00';
-  loadTime = new Date();
+  private loadTime = new Date();
+  private interval: ReturnType<typeof setInterval>;
 
   constructor(private renderer: Renderer2) { }
 
   ngOnInit(): void {
-    setInterval(() => {
-      this.timeSpent = differenceInSeconds(new Date(), this.loadTime);
-      this.timeSpentFormatted = format(new Date(this.timeSpent * 1000), 'mm:ss');
+    this.interval = setInterval(() => {
+      const timeSpent = differenceInSeconds(new Date(), this.loadTime);
+      this.timeSpentFormatted = format(new Date(timeSpent * 1000), 'mm:ss');
     }, 1000);
   }
 
@@ -32,7 +32,9 @@ export class HeaderComponent implements OnInit {
     }
   }
 
-  setTimer() {
-    setInterval(() => this.timeSpent = differenceInSeconds(new Date(), this.loadTime), 1000);
+  ngOnDestroy(): void {
+    this.toggleTheme = false;
+    clearInterval(this.interval);
+    this.renderer.removeClass(document.body, 'dark');
   }
 }

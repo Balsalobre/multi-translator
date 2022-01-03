@@ -13,11 +13,8 @@ body {
 }
 
 :root {
-  --color-page-background: #{$color-gray-dark};
-  --color-text: #{$color-black};
-  --color-border: #{$color-black};
-  --color-article-background: #{$color-white};
-  --color-article-shadow: #{$color-gray-dark};
+  --border-color: #{$border-light};
+  --background-bar: #{$background-bar-light};
   --background: #{$background-light};
   --text-1: #{$text-1-light};
   --text-2: #{$text-2-light};
@@ -26,11 +23,8 @@ body {
 }
 
 .dark {
-  --color-page-background: #{$color-black};
-  --color-text: #{$color-white};
-  --color-border: #{$color-white};
-  --color-article-background: #{$color-gray-light};
-  --color-article-shadow: #{$color-gray-dark};
+  --border-color: #{$border-dark};
+  --background-bar: #{$background-bar-dark};
   --background: #{$background-dark};
   --text-1: #{$text-1-dark};
   --text-2: #{$text-2-dark};

@@ -1,19 +1,23 @@
 @import './colours';
 @import './sizes';
 
-$color-black: rgb(15, 15, 15);
-$color-white: rgb(243, 243, 243);
-$color-gray-light: rgba($color-white, .15);
-$color-gray-dark: rgba($color-black, .15);
 $background-dark: $gray-9;
 $background-light: $gray-0;
+
 $text-1-light: $gray-9;
 $text-2-light: $gray-7;
 $text-1-dark: $gray-1;
 $text-2-dark: $gray-2;
+
 $highlighted-text-light: $indigo-9;
 $highlighted-text-light-shadow: 0 0 15px $indigo-7;
 $highlighted-text-dark: $indigo-1;
 $highlighted-text-dark-shadow:
   0 0 10px $indigo-5,
   0 0 25px $indigo-7;
+
+$border-light: $gray-3;
+$border-dark: $gray-7;
+
+$background-bar-dark: $gray-8;
+$background-bar-light: $gray-0;

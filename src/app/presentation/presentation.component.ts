@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class PresentationComponent implements OnInit, OnDestroy {
 
-  private timeout;
+  private timeout: ReturnType<typeof setTimeout>;
 
   constructor(private router: Router) { }
 
