@@ -20,6 +20,9 @@ body {
   --text-2: #{$text-2-light};
   --highlighted-text: #{$highlighted-text-light};
   --highlighted-text-shadow: #{$highlighted-text-light-shadow};
+  --gradient-text: #{$gradient-light};
+  --box-shadow: #{$box-shadow-light};
+  --focus-input: #{$focus-input-light};
 }
 
 .dark {
@@ -30,6 +33,7 @@ body {
   --text-2: #{$text-2-dark};
   --highlighted-text: #{$highlighted-text-dark};
   --highlighted-text-shadow: #{$highlighted-text-light-shadow};
+  --gradient-text: #{$gradient-dark};
+  --box-shadow: #{$box-shadow-dark};
+  --focus-input: #{$focus-input-dark};
 }
-
-

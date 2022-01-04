@@ -21,3 +21,14 @@ $border-dark: $gray-7;
 
 $background-bar-dark: $gray-8;
 $background-bar-light: $gray-0;
+
+$gradient-1-direction: to right;
+$gradient-2-direction: to bottom right;
+$gradient-light: linear-gradient($gradient-1-direction,#1f005c, #5b0060, #870160, #ac255e, #ca485c, #e16b5c, #f39060, #ffb56b);
+$gradient-dark: linear-gradient($gradient-2-direction,#00F5A0,#00D9F5);
+
+$box-shadow-light: 3px 8px 22px -19px rgba(0 0 0 / 0.81);
+$box-shadow-dark: 23px 23px 39px 2px rgba(0 0 0 / 0.87);
+
+$focus-input-light: $indigo-9;
+$focus-input-dark: $indigo-3;

@@ -1,14 +1,58 @@
+@import "../../../shared/styles/animations";
+
 :host {
   .container {
     .config-bar {
       color: var(--text-1);
       margin: 2rem 4rem;
+      padding: 0 2rem 0 2rem;
       border: 1px solid var(--border-color);
       background-color: var(--background-bar);
       display: flex;
       align-items: center;
       justify-content: space-between;
-      border-radius: 2px;
+      border-radius: 5px;
+      box-shadow: var(--box-shadow);
+      .app-name {
+        font-size: 2rem;
+        font-weight: 700;
+        text-transform: capitalize;
+        background: var(--gradient-text) fixed;
+        background-size: 19ch 35%;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .button-config {
+        a {
+          display: flex;
+          align-items: center;
+          background-color: transparent;
+          border: none;
+          cursor: pointer;
+          text-decoration: none;
+          &:hover {
+            animation: 0.3s smallRotation linear;
+          }
+          i {
+            font-size: 2rem;
+            color: var(--text-2);
+          }
+        }
+      }
+    }
+
+    .data-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 0.5fr 1fr;
+      grid-column-gap: 15px;
+      grid-row-gap: 15px;
+
+      padding: 1rem;
+      border: 1px solid var(--border-color);
+      background-color: var(--background-bar);
+      margin: 2rem 4rem;
+      box-shadow: var(--box-shadow);
     }
   }
 }

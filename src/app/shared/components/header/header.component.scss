@@ -13,7 +13,8 @@
       justify-content: center;
       color: var(--text-1);
       strong {
-        padding-left: 0.26rem;
+        display: flex;
+        justify-content: center;
         min-width: 3.3rem;
         color: var(--highlighted-text);
         text-shadow: var(--highlighted-text-shadow);

@@ -36,4 +36,13 @@
   100% {
     opacity: 0;
   }
-} 
+}
+
+@keyframes smallRotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(60deg);
+  }
+}

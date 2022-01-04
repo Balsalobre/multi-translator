@@ -2,9 +2,23 @@
   <div class="config-bar">
     <div class="app-name">{{ "APP_NAME" | translate }}</div>
     <div class="button-config">
-      <button>
+      <a [routerLink]="['cfg']">
         <i class="ri-settings-3-fill"></i>
-      </button>
+      </a>
     </div>
+  </div>
+
+  <div class="data-container">
+    <app-input
+      type="text"
+      aria-labelledby="Clave"
+      label="Clave">
+    </app-input>
+    <app-input
+      type="text"
+      aria-labelledby="Valor"
+      label="Valor">
+    </app-input>
+    <app-text-area></app-text-area>
   </div>
 </div>
