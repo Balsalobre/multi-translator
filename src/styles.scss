@@ -23,6 +23,7 @@ body {
   --gradient-text: #{$gradient-light};
   --box-shadow: #{$box-shadow-light};
   --focus-input: #{$focus-input-light};
+  --text-area-scrollbar-thumb: #{$text-area-scrollbar-thumb-light};
 }
 
 .dark {
@@ -36,4 +37,5 @@ body {
   --gradient-text: #{$gradient-dark};
   --box-shadow: #{$box-shadow-dark};
   --focus-input: #{$focus-input-dark};
+  --text-area-scrollbar-thumb: #{$text-area-scrollbar-thumb-dark};
 }
