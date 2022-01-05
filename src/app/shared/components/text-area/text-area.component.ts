@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class TextAreaComponent implements OnInit {
 
   @Input() label: string;
+  @Input() minHeight: number;
 
   constructor() { }
 

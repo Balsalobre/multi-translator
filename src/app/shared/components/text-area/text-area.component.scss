@@ -19,12 +19,14 @@
       font-family: 'Poppins';
       resize: none;
       width: 99%;
-
-      padding: 0.6rem 0;
+      height: 100%;
+      margin-top: 1rem;
+      overflow-x: hidden;
+      padding: 0.6rem;
       font-size: 16px;
       border: none;
       outline: none;
-      background: transparent;
+      background: #f2f2f2;
       color: var(--text-1);
       border-bottom: 1px solid var(--text-2);
       &:focus {
@@ -40,8 +42,8 @@
 
     &__label {
       position: absolute;
-      top: 16px;
-      left: 0;
+      top: 27px;
+      left: 5px;
       padding: 10px 0;
       font-size: 16px;
       pointer-events: none;
@@ -54,7 +56,7 @@
   .group__input:focus + .group__label,
   .group__input:not(:placeholder-shown).group__input:not(:focus)
     + .group__label {
-    top: -7px;
+    top: 2px;
     left: 0;
     font-size: 12px;
   }
