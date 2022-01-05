@@ -9,10 +9,12 @@ export class TextAreaComponent implements OnInit {
 
   @Input() label: string;
   @Input() minHeight: number;
+  @Input() jsonFormat: boolean;
 
   constructor() { }
 
   ngOnInit(): void {
+    // http://jsfiddle.net/oldmankris/qK9LK/
   }
 
 }
