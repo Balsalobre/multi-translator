@@ -1,77 +1,16 @@
 [![Angular Logo](https://www.vectorlogo.zone/logos/angular/angular-icon.svg)](https://angular.io/) [![Electron Logo](https://www.vectorlogo.zone/logos/electronjs/electronjs-icon.svg)](https://electronjs.org/)
 
 ![Maintained][maintained-badge]
-[![Make a pull request][prs-badge]][prs]
 [![License][license-badge]](LICENSE.md)
 
-[![Linux Build][linux-build-badge]][linux-build]
-[![MacOS Build][macos-build-badge]][macos-build]
-[![Windows Build][windows-build-badge]][windows-build]
 
-[![Watch on GitHub][github-watch-badge]][github-watch]
-[![Star on GitHub][github-star-badge]][github-star]
-[![Tweet][twitter-badge]][twitter]
-
-# Introduction
-
-Bootstrap and package your project with Angular 13 and Electron 16 (Typescript + SASS + Hot Reload) for creating Desktop applications.
+# Multi - Translator
 
 Currently runs with:
 
-- Angular v13.0.0
+- Angular v13.0.0 (Typescript + SASS)
 - Electron v16.0.0
-
-With this sample, you can:
-
-- Run your app in a local development environment with Electron & Hot reload
-- Run your app in a production environment
-- Package your app into an executable file for Linux, Windows & Mac
-
-/!\ Hot reload only pertains to the renderer process. The main electron process is not able to be hot reloaded, only restarted.
-
-/!\ Angular CLI & Electron Builder needs Node 14 or later to work correctly.
-
-## Getting Started
-
-*Clone this repository locally:*
-
-``` bash
-git clone https://github.com/maximegris/angular-electron.git
-```
-
-*Install dependencies with npm (used by Electron renderer process):*
-
-``` bash
-npm install
-```
-
-There is an issue with `yarn` and `node_modules` when the application is built by the packager. Please use `npm` as dependencies manager.
-
-If you want to generate Angular components with Angular-cli , you **MUST** install `@angular/cli` in npm global context.
-Please follow [Angular-cli documentation](https://github.com/angular/angular-cli) if you had installed a previous version of `angular-cli`.
-
-``` bash
-npm install -g @angular/cli
-```
-
-*Install NodeJS dependencies with npm (used by Electron main process):*
-
-``` bash
-cd app/
-npm install
-```
-
-Why two package.json ? This project follow [Electron Builder two package.json structure](https://www.electron.build/tutorials/two-package-structure) in order to optimize final bundle and be still able to use Angular `ng add` feature.
-
-## To build for development
-
-- **in a terminal window** -> npm start
-
-Voila! You can use your Angular + Electron app in a local development environment with hot reload!
-
-The application code is managed by `app/main.ts`. In this sample, the app runs with a simple Angular App (http://localhost:4200), and an Electron window. \
-The Angular component contains an example of Electron and NodeJS native lib import. \
-You can disable "Developer Tools" by commenting `win.webContents.openDevTools();` in `app/main.ts`.
+- Executable file for Linux, Windows & Mac
 
 ## Project structure
 
