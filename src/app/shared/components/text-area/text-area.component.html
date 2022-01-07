@@ -1,5 +1,12 @@
 <div class="group">
-  <textarea class="group__input" placeholder="&nbsp;"></textarea>
+  <div class="beautify-button">
+    <button class="button" (click)="beautifyJson()">Beautify</button>
+  </div>
+  <textarea
+    class="group__input"
+    placeholder="&nbsp;"
+    [formControl]="inputText">
+  </textarea>
   <label class="group__label">{{label}}</label>
   <label class="group__desciption"></label>
 </div>

@@ -51,6 +51,20 @@
       text-transform: capitalize;
       color: var(--text-1);
     }
+
+    .beautify-button {
+      position: absolute;
+      width: 100%;
+      top: 2.5rem;
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 0.7rem;
+      .button {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+      }
+    }
   }
 
   .group__input:focus + .group__label,

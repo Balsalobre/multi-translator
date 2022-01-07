@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { JsonReformatterService } from '../../services/json-reformatter.service';
 
 @Component({
   selector: 'app-text-area',
@@ -11,10 +13,16 @@ export class TextAreaComponent implements OnInit {
   @Input() minHeight: number;
   @Input() jsonFormat: boolean;
 
-  constructor() { }
+  inputText = new FormControl('');
+
+  constructor(private jsonReformatterService: JsonReformatterService) { }
 
   ngOnInit(): void {
-    // http://jsfiddle.net/oldmankris/qK9LK/
   }
 
+  beautifyJson() {
+    const jsonToFormat = this.inputText.value;
+    const jsonFormatted = this.jsonReformatterService.formatJSON(jsonToFormat, 2);
+    console.log(jsonFormatted);
+  }
 }
