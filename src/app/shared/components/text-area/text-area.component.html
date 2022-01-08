@@ -3,9 +3,13 @@
     <button class="button" (click)="beautifyJson()">Beautify</button>
   </div>
   <textarea
+    #areaelement
     class="group__input"
+    [ngClass]="{ 'invalid': invalid }"
+    spellcheck="false"
     placeholder="&nbsp;"
-    [formControl]="inputText">
+    (keydown)="keyHandler($event)"
+    [formControl]="inputArea">
   </textarea>
   <label class="group__label">{{label}}</label>
   <label class="group__desciption"></label>

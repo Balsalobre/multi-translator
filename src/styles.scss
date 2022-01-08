@@ -24,6 +24,7 @@ body {
   --box-shadow: #{$box-shadow-light};
   --focus-input: #{$focus-input-light};
   --text-area-scrollbar-thumb: #{$text-area-scrollbar-thumb-light};
+  --text-area-background: #{$text-area-background-light};
 }
 
 .dark {
@@ -38,4 +39,5 @@ body {
   --box-shadow: #{$box-shadow-dark};
   --focus-input: #{$focus-input-dark};
   --text-area-scrollbar-thumb: #{$text-area-scrollbar-thumb-dark};
+  --text-area-background: #{$text-area-background-dark};
 }

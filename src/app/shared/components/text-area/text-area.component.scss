@@ -1,3 +1,5 @@
+@import '../../../shared/styles/colours';
+
 :host {
   .group {
     position: relative;
@@ -26,7 +28,7 @@
       font-size: 16px;
       border: none;
       outline: none;
-      background: #f2f2f2;
+      background: var(--text-area-background);
       color: var(--text-1);
       border-bottom: 1px solid var(--text-2);
       &:focus {
@@ -38,6 +40,11 @@
       &:focus + .group__label {
         color: var(--focus-input);
       }
+    }
+
+    &__input.invalid {
+      border-bottom-color: $red-9;
+      color: $red-9;
     }
 
     &__label {
@@ -63,6 +70,8 @@
         border: none;
         background-color: transparent;
         cursor: pointer;
+        color: var(--highlighted-text);
+        text-shadow: var(--highlighted-text-shadow);
       }
     }
   }

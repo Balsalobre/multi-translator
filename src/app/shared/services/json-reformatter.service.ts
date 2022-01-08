@@ -1,20 +1,26 @@
 import { Injectable } from '@angular/core';
 
+interface IJsonFormattedResult {
+  value: string;
+  valid: boolean;
+}
+
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class JsonReformatterService {
-
-  formatJSON(input: string, indent: number) {
-    if (!input.length) {
-      return '';
-    }
+  formatJSON(input: string, indent: number): IJsonFormattedResult {
     try {
       const parsedData = JSON.parse(input);
-      return JSON.stringify(parsedData, null, indent);
-    } catch (e) {
-      console.log(e);
+      return {
+        value: JSON.stringify(parsedData, null, indent),
+        valid: true,
+      };
+    } catch (error) {
+      return {
+        value: input,
+        valid: false
+      };
     }
   }
-
 }
