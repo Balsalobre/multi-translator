@@ -11,17 +11,18 @@ import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './components/header/header.component';
 import { InputComponent } from './components/input/input.component';
 import { TextAreaComponent } from './components/text-area/text-area.component';
+import { DropdownComponent } from './components/dropdown/dropdown.component';
 @NgModule({
   declarations: [
     PageNotFoundComponent, WebviewDirective, HeaderComponent,
-    InputComponent, TextAreaComponent
+    InputComponent, TextAreaComponent, DropdownComponent
   ],
   imports: [
     CommonModule, TranslateModule, FormsModule, ReactiveFormsModule
   ],
   exports: [
     TranslateModule, WebviewDirective, FormsModule,
-    HeaderComponent, InputComponent, TextAreaComponent
+    HeaderComponent, InputComponent, TextAreaComponent, DropdownComponent
   ]
 })
 export class SharedModule {}
