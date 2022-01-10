@@ -7,13 +7,50 @@
     padding-top: 1rem;
 
     &__input {
-      width: 99%;
+      width: 100%;
+      min-height: 2.4rem;
       font-size: 16px;
       border: none;
       outline: none;
       background: transparent;
       color: var(--text-1);
       border-bottom: 1px solid var(--text-2);
+      &:focus {
+        border-bottom-color: var(--focus-input);
+        color: var(--text-1);
+        border-bottom-width: 0.129rem;
+      }
+      &:focus + .group__label {
+        color: var(--focus-input);
+      }
     }
+
+    &__label {
+      position: absolute;
+      top: 16px;
+      left: 0;
+      padding: 10px 0;
+      font-size: 16px;
+      pointer-events: none;
+      transition: 0.5s;
+      text-transform: capitalize;
+      color: var(--text-1);
+    }
+
+    &__options {
+      color: var(--text-1);
+      background-color: var(--options-background);
+      ul {
+        list-style: none;
+      }
+    }
+  }
+
+    .group__input:focus + .group__label,
+  .group__input:not(:placeholder-shown).group__input:not(:focus)
+    + .group__label {
+    top: -7px;
+    left: 0;
+    font-size: 12px;
   }
 }
