@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LanguageService, Laguage } from '../../../core/services/language/language.service';
 
 @Component({
   selector: 'app-dropdown',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DropdownComponent implements OnInit {
 
-  constructor() { }
+  languages: Laguage[];
+
+  constructor(private languageService: LanguageService) { }
 
   ngOnInit(): void {
+    this.languages = this.languageService.languages;
   }
 
 }

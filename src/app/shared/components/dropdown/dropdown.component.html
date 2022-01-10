@@ -1,1 +1,8 @@
-<p>dropdown works!</p>
+<div class="group">
+  <input class="group__input" type="text" readonly>
+  <div class="group__options">
+    <ul>
+      <li *ngFor="let language of languages">{{language.value}}</li>
+    </ul>
+  </div>
+</div>
