@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { LanguageService , Language } from '../../../core/services/language/language.service';
 
 @Component({
   selector: 'app-add-data',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddDataComponent implements OnInit {
 
-  constructor() { }
+  options: Language[];
+
+  constructor(private languageService: LanguageService) { }
 
   ngOnInit(): void {
+    this.options = this.languageService.languages;
+    console.log(this.options);
+  }
+
+  languageSelected(option) {
+    console.log(option);
   }
 
 }

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-export type Laguage = {
+export type Language = {
   key: string;
   value: string;
 };
@@ -10,7 +10,7 @@ export type Laguage = {
 })
 export class LanguageService {
 
-  _languages: Laguage[] = [
+  _languages: Language[] = [
     { key: 'ca', value: 'Catalán' },
     { key: 'de', value: 'Alemán' },
     { key: 'en', value: 'Inglés' },
@@ -25,11 +25,11 @@ export class LanguageService {
 
   constructor() { }
 
-  get languages(): Laguage[] {
+  get languages(): Language[] {
     return this._languages;
   }
 
-  set languages(value: Laguage[]) {
+  set languages(value: Language[]) {
     this._languages = value;
   }
 }

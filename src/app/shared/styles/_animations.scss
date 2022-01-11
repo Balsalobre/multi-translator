@@ -46,3 +46,12 @@
     transform: rotate(60deg);
   }
 }
+
+@keyframes dropDownArrow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}

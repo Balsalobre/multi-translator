@@ -2,12 +2,22 @@
   <input class="group__input"
     type="text"
     placeholder="&nbsp;"
+    (focus)="focused = true"
+    [formControl]="inputValue"
+    (focusout)="focusedOutHandler()"
     readonly>
-  <label class="group__label">{{label}}</label>
+  <div class="state-icon">
+    <i [ngClass]="{'open': focused }"
+      class="ri-arrow-down-s-line">
+    </i>
+  </div>
+  <label class="group__label" [ngClass]="{'focused': selectedValue }" >{{label}}</label>
   <label class="group__desciption"></label>
-  <div class="group__options">
+  <div class="group__options" *ngIf="focused">
     <ul>
-      <li *ngFor="let language of languages">{{language.value}}</li>
+      <li
+        *ngFor="let option of options"
+        (click)="clickHandler(option)">{{option.value}}</li>
     </ul>
   </div>
 </div>

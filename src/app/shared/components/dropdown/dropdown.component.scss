@@ -1,3 +1,5 @@
+@import '../../styles/animations';
+
 :host {
   .group {
     position: relative;
@@ -25,6 +27,21 @@
       }
     }
 
+    .state-icon {
+      position: absolute;
+      display: flex;
+      right: 0;
+      top: 1.8rem;
+      i {
+        font-size: 1.4rem;
+        color: var(--text-1);
+      }
+
+      .open {
+        animation: dropDownArrow 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+      }
+    }
+
     &__label {
       position: absolute;
       top: 16px;
@@ -37,20 +54,33 @@
       color: var(--text-1);
     }
 
+    &__label.focused {
+      top: -7px;
+      left: 0;
+      font-size: 12px;
+    }
+
     &__options {
       color: var(--text-1);
       background-color: var(--options-background);
       ul {
         list-style: none;
+        li {
+          padding: 0.5rem 0.5rem 0.5rem 0.7rem;
+          cursor: default;
+          &:hover {
+            background-color: var(--options-hover);
+          }
+        }
       }
     }
   }
 
-    .group__input:focus + .group__label,
-  .group__input:not(:placeholder-shown).group__input:not(:focus)
-    + .group__label {
-    top: -7px;
-    left: 0;
-    font-size: 12px;
-  }
+  //   .group__input:focus + .group__label,
+  // .group__input:not(:placeholder-shown).group__input:not(:focus)
+  //   + .group__label {
+  //   top: -7px;
+  //   left: 0;
+  //   font-size: 12px;
+  // }
 }
