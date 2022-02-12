@@ -11,6 +11,7 @@ export type Language = {
 export class LanguageService {
 
   _languages: Language[] = [
+    { key: null, value: '' },
     { key: 'ca', value: 'Catalán' },
     { key: 'de', value: 'Alemán' },
     { key: 'en', value: 'Inglés' },

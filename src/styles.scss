@@ -27,6 +27,7 @@ body {
   --text-area-background: #{$text-area-background-light};
   --options-background: #{$options-background-light};
   --options-hover: #{$options-hover-light};
+  --button-submit-background: #{$submit-btn-bg-light};
 }
 
 .dark {
@@ -44,4 +45,5 @@ body {
   --text-area-background: #{$text-area-background-dark};
   --options-background: #{$options-background-dark};
   --options-hover: #{$options-hover-dark};
+  --button-submit-background: #{$submit-btn-bg-dark};
 }

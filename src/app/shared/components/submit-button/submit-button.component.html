@@ -1,0 +1,8 @@
+<button class="button"
+  [ngClass]="{'active': loading}"
+  (click)="clickHandler()">
+	<span *ngIf="!loading" class="submit">{{value}}</span>
+	<span *ngIf="loading" class="loading">
+    <i class="ri-refresh-line"></i>
+  </span>
+</button>

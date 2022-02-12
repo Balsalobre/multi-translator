@@ -22,6 +22,7 @@ export class DropdownComponent implements OnInit, OnDestroy {
   delayFocusOut: Observable<number> = timer(180);
   subscritions = new Subscription();
   inputValue = new FormControl('');
+  isDropdownOpen = false;
 
   constructor() { }
 
@@ -29,9 +30,15 @@ export class DropdownComponent implements OnInit, OnDestroy {
   }
 
   clickHandler(optionSelected: Option) {
-    this.selectedOutput.emit(optionSelected);
-    this.selectedValue = true;
-    this.inputValue.setValue(optionSelected.value);
+    if(optionSelected.key) {
+      this.selectedOutput.emit(optionSelected);
+      this.selectedValue = true;
+      this.inputValue.setValue(optionSelected.value);
+    } else {
+      this.focused = false;
+      this.selectedValue = false;
+      this.inputValue.setValue('');
+    }
   }
 
   focusedOutHandler(){
@@ -40,6 +47,10 @@ export class DropdownComponent implements OnInit, OnDestroy {
         this.focused = false;
       })
     );
+  }
+
+  openCloseDropdown() {
+    this.focused = !this.focused;
   }
 
   ngOnDestroy(): void {

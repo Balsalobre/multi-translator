@@ -2,7 +2,7 @@
   <input class="group__input"
     type="text"
     placeholder="&nbsp;"
-    (focus)="focused = true"
+    (click)="openCloseDropdown()"
     [formControl]="inputValue"
     (focusout)="focusedOutHandler()"
     readonly>
@@ -11,7 +11,9 @@
       class="ri-arrow-down-s-line">
     </i>
   </div>
-  <label class="group__label" [ngClass]="{'focused': selectedValue }" >{{label}}</label>
+  <label class="group__label" [ngClass]="{'focused': selectedValue }">
+    {{label}}
+  </label>
   <label class="group__desciption"></label>
   <div class="group__options" *ngIf="focused">
     <ul>

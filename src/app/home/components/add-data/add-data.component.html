@@ -22,14 +22,12 @@
       <app-dropdown
         label="Lenguaje de entrada"
         [options]="options"
-        (selectedOutput)="languageSelected($event)"
-        ></app-dropdown>
+        (selectedOutput)="languageSelected($event)">
+      </app-dropdown>
 
-        <div class="container">
-          <div class="chevron"></div>
-          <div class="chevron"></div>
-          <div class="chevron"></div>
-        </div>
+      <div class="submit-container">
+        <app-submit-button value="Traducir"></app-submit-button>
+      </div>
     </div>
   </div>
 </div>
