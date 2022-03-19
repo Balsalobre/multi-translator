@@ -5,9 +5,7 @@ interface IJsonFormattedResult {
   valid: boolean;
 }
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable({ providedIn: 'root' })
 export class JsonReformatterService {
   formatJSON(input: string, indent: number): IJsonFormattedResult {
     try {
