@@ -10,11 +10,12 @@ export class AddDataComponent implements OnInit {
 
   options: Language[];
 
-  constructor(private languageService: LanguageService) { }
+  constructor(
+    private languageService: LanguageService,
+  ) { }
 
-  ngOnInit(): void {
+  async ngOnInit() {
     this.options = this.languageService.languages;
-    console.log(this.options);
   }
 
   languageSelected(option) {
